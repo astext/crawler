@@ -26,6 +26,8 @@ request("http://www.drudgereport.com/", function(error, response, body) {
 	today = dd +  mm + yyyy;
 	//document.write(today);
   
+  
+  
   $('a').each(function( index ) {
     var title = $(this).text().trim();
     var link = $(this).attr('href');
