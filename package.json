@@ -1,14 +1,14 @@
 {
 	"name": "simple-webscraper-javascript",
 	"version": "1.0.0",
-	"main": "scrape-reddit.js",
+	"main": "scrape-drudgeh.js",
 	"dependencies": {
 		"cheerio": "^1.0.0-rc.2",
-		"request": "^2.87.0",
 		"fs-extra": "^6.0.1",
+		"request": "^2.87.0",
 		"url-parse": "^1.4.1"
 	},
 	"scripts": {
-		"drudge": "node scrape-drudge.js"  
+		"drudge": "node scrape-drudgeh.js"
 	}
 }
