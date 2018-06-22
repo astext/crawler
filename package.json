@@ -9,6 +9,7 @@
 		"url-parse": "^1.4.1"
 	},
 	"scripts": {
-		"drudge": "node scrape-drudgeh.js"
+		"drudge": "node scrape-drudgeh.js",
+		"freeb": "node scrape-freeb.js"
 	}
 }
