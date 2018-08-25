@@ -5,8 +5,8 @@
 	"dependencies": {
 		"cheerio": "^1.0.0-rc.2",
 		"fs-extra": "^6.0.1",
-		"request": "^2.87.0",
-		"url-parse": "^1.4.1"
+		"request": "^2.88.0",
+		"url-parse": "^1.4.3"
 	},
 	"scripts": {
 		"drudge": "node scrape-drudgeh.js",
