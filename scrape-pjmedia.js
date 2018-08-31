@@ -31,7 +31,7 @@ request("https://pjmedia.com/", function(error, response, body) {
     $('div.title h3 a').each(function( index ) {
         var title = $(this).text().trim();
         var link = $(this).attr('href');
-        fs.appendFileSync('pjmedia_' + today + '.html', '<div class="crawl-scrape"><h3>' + title + '</h3> <a target="_blank" href="https://pjmedia.com'+ link + '">' + link + '</a><br> </div>');
+        fs.appendFileSync('pjmedia/pjmedia_' + today + '.html', '<div class="crawl-scrape"><h3>' + title + '</h3> <a target="_blank" href="https://pjmedia.com'+ link + '">' + link + '</a><br> </div>');
     });
 
    

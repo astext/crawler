@@ -29,7 +29,7 @@ request("http://freebeacon.com/", function(error, response, body) {
   $('article header h2 a').each(function( index ) {
     var title = $(this).text().trim();
     var link = $(this).attr('href');
-    fs.appendFileSync('freebeacon_' + today + '.html', '<div class="freeb-scrape"><h3>' + title + '</h3><p><a target="_blank" href='+ link + '>' + link + '</a></p></div>');
+    fs.appendFileSync('freeb/freebeacon_' + today + '.html', '<div class="freeb-scrape"><h3>' + title + '</h3><p><a target="_blank" href='+ link + '>' + link + '</a></p></div>');
   });
 
 });

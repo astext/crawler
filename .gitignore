@@ -57,7 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
-drudge_*.html
-freebeacon_*.html
-gpundit_*.html
-pjmedia_*.html
+drudge/*
+freeb/*
+gpundit/*
+pjmedia/*

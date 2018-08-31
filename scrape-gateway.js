@@ -31,7 +31,7 @@ request("https://www.thegatewaypundit.com/", function(error, response, body) {
     $(('h3.post-title a') || ('div.post-thumbnail a')).each(function( index ) {
         var title = $(this).text().trim();
         var link = $(this).attr('href');
-        fs.appendFileSync('gpundit_' + today + '.html', '<div class="gpundit-scrape"><h3>' + title + '</h3> <a target="_blank" href='+ link + '>' + link + '</a><br> </div>');
+        fs.appendFileSync('gpundit/gpundit_' + today + '.html', '<div class="gpundit-scrape"><h3>' + title + '</h3> <a target="_blank" href='+ link + '>' + link + '</a><br> </div>');
     });
 
    
