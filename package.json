@@ -2,7 +2,7 @@
 	"name": "simple-webscraper-javascript",
 	"description": "scrape news from various sites",
 	"repository": "https://github.com/astext/crawler",
-	"version": "1.0.0",
+	"version": "1.5.0",
 	"main": "scrape-drudgeh.js",
 	"dependencies": {
 		"cheerio": "^1.0.0-rc.2",
