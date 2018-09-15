@@ -58,11 +58,11 @@ typings/
 .env
 
 # output html
-drudge/*
-freeb/*
-gpundit/*
-pjmedia/*
-reuters/*
+drudge/*.html
+freeb/*.html
+gpundit/*.html
+pjmedia/*.html
+reuters/*.html
 abcnews/*.html
 dmail/*.html
 *.zip
