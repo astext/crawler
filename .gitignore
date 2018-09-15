@@ -62,3 +62,9 @@ drudge/*
 freeb/*
 gpundit/*
 pjmedia/*
+reuters/*
+abcnews/*
+dmail/*
+*.zip
+dmail/dmail_16092018.html
+abcnews/abcnews_16092018.html

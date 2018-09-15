@@ -2,8 +2,8 @@
 	"name": "simple-webscraper-javascript",
 	"description": "scrape news from various sites",
 	"repository": "https://github.com/astext/crawler",
-	"version": "1.5.0",
-	"main": "scrape-drudgeh.js",
+	"version": "2.0.0",
+	"main": "crawler.js",
 	"author": "Anthony Sallis",
 	"dependencies": {
 		"cheerio": "^1.0.0-rc.2",
@@ -15,8 +15,11 @@
 	"scripts": {
 		"drudge": "node scrape-drudgeh.js",
 		"freeb": "node scrape-freeb.js",
-		"gateway": "node scrape-gateway.js",
+		"gpundit": "node scrape-gateway.js",
 		"pjmedia": "node scrape-pjmedia.js",
-		"all": "npm-run-series drudge freeb gateway pjmedia"
+		"reuters": "node scrape-reuters.js",
+		"abcnews": "node scrape-abcnews.js",
+		"dmail": "node scrape-dmail.js",
+		"all": "npm-run-series drudge freeb gpundit pjmedia reuters abcnews dmail"
 	}
 }

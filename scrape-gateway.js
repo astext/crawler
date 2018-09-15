@@ -2,7 +2,9 @@ var request = require('request');
 var cheerio = require('cheerio');
 var fs = require('fs-extra');
 
-request("https://www.thegatewaypundit.com/", function(error, response, body) {
+var requesthost = "https://www.thegatewaypundit.com" ;
+
+request(requesthost, function(error, response, body) {
   if(error) {
     console.log("Error: " + error);
   }
@@ -24,17 +26,26 @@ request("https://www.thegatewaypundit.com/", function(error, response, body) {
 	} 
 
 	today = dd +  mm + yyyy;
-	//document.write(today);
-  
-  
-  
+
+  var pagehead = '<!doctype html><html lang="en"><meta charset="utf-8">';
+  pagehead += '<title> Gateway Pundit scrape: ' + today + '</title>' ;
+  pagehead += '<link rel="stylesheet" href="../css/astextnet.min.css">' ;
+  pagehead += '</head><body>';
+  pagehead += '<h1 class="px-5 py-3 bg-light">Gateway Pundit ' + today + '</h1>' ;
+  var pagefoot = '<hr></body></html>' ;
+  var pagename = 'gpundit/gpundit_' + today + '.html' ;
+
+  fs.appendFileSync(pagename, pagehead) ;  
+
+
     $(('h3.post-title a') || ('div.post-thumbnail a')).each(function( index ) {
-        var title = $(this).text().trim();
-        var link = $(this).attr('href');
-        fs.appendFileSync('gpundit/gpundit_' + today + '.html', '<div class="gpundit-scrape"><h3>' + title + '</h3> <a target="_blank" href='+ link + '>' + link + '</a><br> </div>');
+       var title = $(this).text().trim();
+      var link = $(this).attr('href');
+      fs.appendFileSync(pagename, '<div class="scraped px-3 pb-2"><h3 class="h3 text-success">' + title + '</h3><p class="px-3 pb-2"><a target="_blank" href="' + link + '">' + link + '</a></p></div>');
     });
 
-   
+    fs.appendFileSync(pagename, pagefoot) ;
+
 
   
 });

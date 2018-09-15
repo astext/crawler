@@ -2,7 +2,7 @@ var request = require('request');
 var cheerio = require('cheerio');
 var fs = require('fs-extra');
 
-var requesthost = "http://www.drudgereport.com" ;
+var requesthost = "https://abcnews.go.com/" ;
 
 request(requesthost, function(error, response, body) {
   if(error) {
@@ -28,17 +28,17 @@ request(requesthost, function(error, response, body) {
 	today = dd +  mm + yyyy;
 
   var pagehead = '<!doctype html><html lang="en"><meta charset="utf-8">';
-  pagehead += '<title> Drudge Report scrape: ' + today + '</title>' ;
+  pagehead += '<title> ABC News scrape: ' + today + '</title>' ;
   pagehead += '<link rel="stylesheet" href="../css/astextnet.min.css">' ;
   pagehead += '</head><body>';
-  pagehead += '<h1 class="px-5 py-3 bg-light">Drudge Report ' + today + '</h1>' ;
+  pagehead += '<h1 class="px-5 py-3 bg-light">ABC News ' + today + '</h1>' ;
   var pagefoot = '<hr></body></html>' ;
-  var pagename = 'drudge/drudge_' + today + '.html' ;
+  var pagename = 'abcnews/abcnews_' + today + '.html' ;
 
   fs.appendFileSync(pagename, pagehead) ;  
 
   
-  $('a').each(function( index ) {
+  $('.headlines-li.story h1 a').each(function( index ) {
     var title = $(this).text().trim();
     var link = $(this).attr('href');
     fs.appendFileSync(pagename, '<div class="scraped px-3 pb-2"><h3 class="h3 text-success">' + title + '</h3><p class="px-3 pb-2"><a target="_blank" href="' + link + '">' + link + '</a></p></div>');
