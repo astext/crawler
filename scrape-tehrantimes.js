@@ -30,15 +30,16 @@ request(requesthost, function(error, response, body) {
 	if(mm<10) {
 		mm = '0'+mm
 	} 
-
+    
+    ftoday = dd + '&nbsp;' + monthNames[today.getMonth()] + '&nbsp;' + yyyy ;
     today = dd +  mm + yyyy;
-    ftoday = dd + '&nbsp;' + monthNames[mm.getMonth()] + '&nbsp;' + yyyy ; 
+     
 
   var pagehead = '<!doctype html><html lang="en"><meta charset="utf-8">';
-  pagehead += '<title> Tehran Times scrape: ' + ftoday + '</title>' ;
+  pagehead += '<title> Tehran Times scrape: ' + today + '</title>' ;
   pagehead += '<link rel="stylesheet" href="../css/astextnet.min.css">' ;
   pagehead += '</head><body>';
-  pagehead += '<h1 class="px-5 py-3 bg-light">Tehran Times ' + today + '</h1>' ;
+  pagehead += '<h1 class="px-5 py-3 bg-light">Tehran Times ' + ftoday + '</h1>' ;
   var pagefoot = '<hr></body></html>' ;
   var pagename = 'tehran/tehran_' + today + '.html' ;
 

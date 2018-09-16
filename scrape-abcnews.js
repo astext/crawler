@@ -13,9 +13,16 @@ request(requesthost, function(error, response, body) {
   var $ = cheerio.load(body);
   
   var today = new Date();
-	var dd = today.getDate();
-	var mm = today.getMonth()+1; //January is 0!
-	var yyyy = today.getFullYear();
+	var ftoday = today ;
+
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+    var yyyy = today.getFullYear();
+    
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+    ];
+
 
 	if(dd<10) {
 		dd = '0'+dd
@@ -25,13 +32,15 @@ request(requesthost, function(error, response, body) {
 		mm = '0'+mm
 	} 
 
+  ftoday = dd + '&nbsp;' + monthNames[today.getMonth()] + '&nbsp;' + yyyy ;
+
 	today = dd +  mm + yyyy;
 
   var pagehead = '<!doctype html><html lang="en"><meta charset="utf-8">';
   pagehead += '<title> ABC News scrape: ' + today + '</title>' ;
   pagehead += '<link rel="stylesheet" href="../css/astextnet.min.css">' ;
   pagehead += '</head><body>';
-  pagehead += '<h1 class="px-5 py-3 bg-light">ABC News ' + today + '</h1>' ;
+  pagehead += '<h1 class="px-5 py-3 bg-light">ABC News ' + ftoday + '</h1>' ;
   var pagefoot = '<hr></body></html>' ;
   var pagename = 'abcnews/abcnews_' + today + '.html' ;
 
