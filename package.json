@@ -20,6 +20,7 @@
 		"reuters": "node scrape-reuters.js",
 		"abcnews": "node scrape-abcnews.js",
 		"dmail": "node scrape-dmail.js",
-		"all": "npm-run-series drudge freeb gpundit pjmedia reuters abcnews dmail"
+		"tehran": "node scrape-tehrantimes.js",
+		"all": "npm-run-series drudge freeb gpundit pjmedia reuters abcnews dmail tehran"
 	}
 }
