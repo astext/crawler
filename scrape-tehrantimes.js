@@ -2,7 +2,7 @@ var request = require('request');
 var cheerio = require('cheerio');
 var fs = require('fs-extra');
 
-var requesthost = "https://www.tehrantimes.com/" ;
+var requesthost = "https://www.tehrantimes.com" ;
 
 request(requesthost, function(error, response, body) {
   if(error) {
@@ -37,10 +37,10 @@ request(requesthost, function(error, response, body) {
 
   fs.appendFileSync(pagename, pagehead) ;
 
-  $('article h3.article-heading a').each(function( index ) {
+  $('li.news h3 a').each(function( index ) {
     var title = $(this).text().trim();
     var link = $(this).attr('href').trim();
-    fs.appendFileSync(pagename, '<div class="scraped px-3 pb-2"><h3 class="h3 text-success">' + title + '</h3><p class="px-3 pb-2"><a target="_blank" href="' + requesthost + link + '">' + link + '</a></p></div>');
+    fs.appendFileSync(pagename, '<div class="scraped px-3 pb-2 border border-light"><h3 class="h4 text-success">' + title + '</h3><p class="px-3 pb-2"><a target="_blank" href="' + requesthost + link + '">' + link + '</a></p></div>');
   });
 
   fs.appendFileSync(pagename, pagefoot) ;
