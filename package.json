@@ -1,8 +1,8 @@
 {
-	"name": "simple-webscraper-javascript",
+	"name": "the-astext-scraper",
 	"description": "scrape news from various sites",
 	"repository": "https://github.com/astext/crawler",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"main": "crawler.js",
 	"author": "Anthony Sallis",
 	"dependencies": {
@@ -22,6 +22,9 @@
 		"dmail": "node scrape-dmail.js",
 		"tehran": "node scrape-tehrantimes.js",
 		"thehill": "node scrape-thehill.js",
-		"all": "npm-run-series drudge freeb gpundit pjmedia reuters abcnews dmail tehran thehill"
+		"washex": "node scrape-washex.js",
+		"lifezette": "node scrape-lifezette.js",
+
+		"all": "npm-run-series drudge freeb gpundit pjmedia reuters abcnews dmail tehran thehill washex lifezette"
 	}
 }
