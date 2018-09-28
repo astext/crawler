@@ -38,11 +38,11 @@ request(requesthost, function(error, response, body) {
 
   var pagehead = '<!doctype html><html lang="en"><meta charset="utf-8">';
   pagehead += '<title> ABC News scrape: ' + today + '</title>' ;
-  pagehead += '<link rel="stylesheet" href="../css/astextnet.min.css">' ;
+  pagehead += '<link rel="stylesheet" href="../../css/astextnet.min.css">' ;
   pagehead += '</head><body>';
   pagehead += '<h1 class="px-5 py-3 bg-light">ABC News ' + ftoday + '</h1>' ;
   var pagefoot = '<hr></body></html>' ;
-  var pagename = 'abcnews/abcnews_' + today + '.html' ;
+  var pagename = 'output/abcnews/abcnews_' + today + '.html' ;
 
   fs.appendFileSync(pagename, pagehead) ;  
 

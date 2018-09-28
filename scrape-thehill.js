@@ -36,11 +36,11 @@ request(requesthost, function(error, response, body) {
 
   var pagehead = '<!doctype html><html lang="en"><meta charset="utf-8">';
   pagehead += '<title> The Hill scrape: ' + today + '</title>' ;
-  pagehead += '<link rel="stylesheet" href="../css/astextnet.min.css">' ;
+  pagehead += '<link rel="stylesheet" href="../../css/astextnet.min.css">' ;
   pagehead += '</head><body>';
   pagehead += '<h1 class="px-5 py-3 bg-light">The Hill ' + ftoday + '</h1>' ;
   var pagefoot = '<hr></body></html>' ;
-  var pagename = 'thehill/thehill_' + today + '.html' ;
+  var pagename = 'output/thehill/thehill_' + today + '.html' ;
 
   fs.appendFileSync(pagename, pagehead) ;
 

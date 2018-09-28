@@ -37,11 +37,11 @@ request(requesthost, function(error, response, body) {
 
   var pagehead = '<!doctype html><html lang="en"><meta charset="utf-8">';
   pagehead += '<title> Daily Mail scrape: ' + today + '</title>' ;
-  pagehead += '<link rel="stylesheet" href="../css/astextnet.min.css">' ;
+  pagehead += '<link rel="stylesheet" href="../../css/astextnet.min.css">' ;
   pagehead += '</head><body>';
   pagehead += '<h1 class="px-5 py-3 bg-light">Daily Mail ' + ftoday + '</h1>' ;
   var pagefoot = '<hr></body></html>' ;
-  var pagename = 'dmail/dmail_' + today + '.html' ;
+  var pagename = 'output/dmail/dmail_' + today + '.html' ;
 
   fs.appendFileSync(pagename, pagehead) ;  
 

@@ -36,11 +36,11 @@ request(requesthost, function(error, response, body) {
 
   var pagehead = '<!doctype html><html lang="en"><meta charset="utf-8">';
   pagehead += '<title> Drudge Report scrape: ' + today + '</title>' ;
-  pagehead += '<link rel="stylesheet" href="../css/astextnet.min.css">' ;
+  pagehead += '<link rel="stylesheet" href="../../css/astextnet.min.css">' ;
   pagehead += '</head><body>';
   pagehead += '<h1 class="px-5 py-3 bg-light">Drudge Report ' + ftoday + '</h1>' ;
   var pagefoot = '<hr></body></html>' ;
-  var pagename = 'drudge/drudge_' + today + '.html' ;
+  var pagename = 'output/drudge/drudge_' + today + '.html' ;
 
   fs.appendFileSync(pagename, pagehead) ;  
 
