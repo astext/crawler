@@ -2,7 +2,7 @@
 	"name": "the-astext-scraper",
 	"description": "scrape news from various sites",
 	"repository": "https://github.com/astext/crawler",
-	"version": "2.1.0",
+	"version": "2.2.0",
 	"main": "crawler.js",
 	"author": "Anthony Sallis",
 	"dependencies": {
@@ -24,7 +24,7 @@
 		"thehill": "node scrape-thehill.js",
 		"washex": "node scrape-washex.js",
 		"lifezette": "node scrape-lifezette.js",
-
+		
 		"all": "npm-run-series drudge freeb gpundit pjmedia reuters abcnews dmail tehran thehill washex lifezette"
 	}
 }
