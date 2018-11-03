@@ -2,7 +2,7 @@
 	"name": "the-astext-scraper",
 	"description": "scrape news from various sites",
 	"repository": "https://github.com/astext/crawler",
-	"version": "2.2.0",
+	"version": "2.2.1",
 	"main": "crawler.js",
 	"author": "Anthony Sallis",
 	"dependencies": {
