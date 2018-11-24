@@ -13,7 +13,6 @@ request(requesthost, function(error, response, body) {
   var $ = cheerio.load(body);
   
   var today = new Date();
-  var ftoday = today ;
 
   var dd = today.getDate();
   var mm = today.getMonth()+1; //January is 0!
@@ -21,6 +20,10 @@ request(requesthost, function(error, response, body) {
   
   const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
+  ];
+
+  const smonthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
   ];
 
 	if(dd<10) {
@@ -31,17 +34,17 @@ request(requesthost, function(error, response, body) {
 		mm = '0'+mm
 	} 
 
-  ftoday = dd + '&nbsp;' + monthNames[today.getMonth()] + '&nbsp;' + yyyy ;
-  today = dd +  mm + yyyy;
+  var ftoday = dd + '&nbsp;' + monthNames[today.getMonth()] + '&nbsp;' + yyyy;
+  var fntoday = dd + smonthNames[today.getMonth()] + yyyy;
   
 
   var pagehead = '<!doctype html><html lang="en"><meta charset="utf-8">';
-  pagehead += '<title> Daily Mail scrape: ' + today + '</title>' ;
+  pagehead += '<title> Daily Mail scrape: ' + ftoday + '</title>' ;
   pagehead += '<link rel="stylesheet" href="../../css/astextnet.min.css">' ;
   pagehead += '</head><body>';
   pagehead += '<h1 class="px-5 py-3 bg-light">Daily Mail ' + ftoday + '</h1>' ;
   var pagefoot = '<hr></body></html>' ;
-  var pagename = 'output/dmail/dmail_' + today + '.html' ;
+  var pagename = 'output/dmail/dmail_' + fntoday + '.html' ;
 
   fs.appendFileSync(pagename, pagehead) ;  
 
