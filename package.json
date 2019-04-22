@@ -6,11 +6,11 @@
 	"main": "crawler.js",
 	"author": "Anthony Sallis",
 	"dependencies": {
-		"cheerio": "^1.0.0-rc.2",
+		"cheerio": "^1.0.0-rc.3",
 		"fs-extra": "^7.0.1",
 		"npm-run-series": "^1.0.1",
 		"request": "^2.88.0",
-		"url-parse": "^1.4.4"
+		"url-parse": "^1.4.6"
 	},
 	"scripts": {
 		"drudge": "node scrape-drudgeh.js",
