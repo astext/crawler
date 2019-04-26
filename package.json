@@ -10,7 +10,7 @@
 		"fs-extra": "^7.0.1",
 		"npm-run-series": "^1.0.1",
 		"request": "^2.88.0",
-		"url-parse": "^1.4.6"
+		"url-parse": "^1.4.7"
 	},
 	"scripts": {
 		"drudge": "node scrape-drudgeh.js",
