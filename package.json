@@ -9,7 +9,7 @@
 		"cheerio": "^1.0.0-rc.3",
 		"fs-extra": "^7.0.1",
 		"npm-run-series": "^1.0.1",
-		"request": "^2.88.0",
+		"request": "^2.88.2",
 		"url-parse": "^1.4.7"
 	},
 	"scripts": {
